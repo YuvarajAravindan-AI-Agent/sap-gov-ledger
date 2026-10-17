@@ -1,0 +1,10 @@
+{
+  "name": "sap-gov-ledger",
+  "version": "1.0.0",
+  "description": "Stand-in for the system of record: a separate service with its own data and its own token check, called through a BTP destination",
+  "private": true,
+  "main": "server.js",
+  "engines": { "node": ">=20" },
+  "scripts": { "start": "node server.js", "test": "node test/ledger.test.js" },
+  "dependencies": { "@sap/xssec": "^4", "express": "^4" }
+}

@@ -1,0 +1,10 @@
+applications:
+  - name: sap-gov-ledger
+    memory: 128M
+    disk_quota: 256M
+    buildpacks: [nodejs_buildpack]
+    command: node server.js
+    health-check-type: http
+    health-check-http-endpoint: /health
+    services:
+      - sap-gov-sandbox-auth   # same XSUAA instance: tokens issued to the stock service validate here
